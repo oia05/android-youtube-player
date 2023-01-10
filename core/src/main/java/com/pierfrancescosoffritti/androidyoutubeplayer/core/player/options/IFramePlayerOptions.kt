@@ -75,6 +75,15 @@ class IFramePlayerOptions private constructor(private val playerOptions: JSONObj
             return this
         }
 
+ 	/**
+         * Controls the Full Screen Button Visibility.
+         * @param fs If set to 0: Full Screen Button will not be visible. If set to 1:Full Screen Button will be visible.
+         */
+        fun fs(fs: Int): Builder {
+            addInt(FS, fs)
+            return this
+        }
+
         /**
          * Controls video annotations.
          * @param ivLoadPolicy if set to 1: the player will show video annotations. If set to 3: they player won't show video annotations.
